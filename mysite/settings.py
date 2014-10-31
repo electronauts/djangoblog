@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Django settings for mysite project.
 
@@ -25,6 +26,22 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
+
+
+# Одна проблема
+# Папку templates и файл myview.html мы создали самостоятельно,
+# а значит Django о них ничего не знает
+# необходимо добавить каталог с шаблонами в settings.py нашего проекта
+# Читаем доки https://docs.djangoproject.com/en/1.6/ref/settings/#template-dirs
+# 
+# Вот мой полный путь к шаблонам:/home/nik/django-developer/env16/mysite/templates
+
+# TEMPLATE_DIRS - это кортеж, состоящий из каталогов где Django необходимо искать наши шаблоны
+# Используются абсолютные пути!
+
+TEMPLATE_DIRS = (
+    '/home/nik/django-developer/env16/mysite/templates'
+)
 
 
 # Application definition
