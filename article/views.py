@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render
-# We need to return response in function "basic_one"
-# we should import from django HttpResponse
+# ----ччч - я тут самый прокаченный дать номер пйдра----
+# kill me this is mac - drop the base!!!
+# Для "basic_one"
+# Чтобы мы могли возвратить response - Нам нужно из django импортировать HttpResponse
 from django.http.response import HttpResponse
 
 # Импортируем несколько важных для нас классов
@@ -17,12 +19,13 @@ from django.template import Context
 from django.shortcuts  import render_to_response 
 
 
-# 'basic_one' is a function.
-# Function basic_one gets a request, makes some actions and [should] return a response.
-# We need to import from django HttpResponse to make return a response happen
+#  Функция 'basic_one'.
+# В качестве параметра функция должна получать request (некий запрос), 
+# делает некие действия и должна вернуть response - ответ.
 def basic_one(request):
     view = "basic_one"
-# Here we try to simulate some html-code
+# Здесь мы имитируем html-code
+# % - знак означает что мы должны его заменить строковым значением описанным после кавычек
     html = "<html><body>This is %s view fuckyeah!!! lol</html></body>" % view
     return HttpResponse(html)
 
@@ -57,9 +60,10 @@ def template_two(request):
 # Второй вариант несколько сложен, нам нужно написать целых 4 строки для простейшего действия.
 # Разработчики Django создали упращенный вариант
 
-
+# самый простой и эффективный способ отправки информации пользователю:
 def template_three_simple(request):
     view = "template_thee"
 # В какой view отправляем данные 
 # Потом какие именно мы собираемся отправлять данные
     return render_to_response('myview.html', {'name': view})
+
