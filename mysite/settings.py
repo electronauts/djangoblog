@@ -39,8 +39,12 @@ ALLOWED_HOSTS = []
 # TEMPLATE_DIRS - это кортеж, состоящий из каталогов где Django необходимо искать наши шаблоны
 # Используются абсолютные пути!
 
+
 TEMPLATE_DIRS = (
-    '/home/nik/django-developer/env16/mysite/templates'
+    '/home/nik/django-developer/env16/mysite/templates',
+# == Урок 6. Сюда хуйнули это, чтобы ебать знало
+    '/home/nik/django-developer/env16/mysite/article/templates',
+
 )
 
 

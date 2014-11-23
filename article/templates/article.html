@@ -1,9 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Статья</title>
-</head>
-<body>
+<!-- Тут должна быть только та, информация, которая будет внедрена в шаблон-->
+<!-- Поэтому нам не нужны теги <body>, <head>, <html>, <!DOCTYPE>-->
+<!-- Все это уже будет в базовом файле-->
+<!-- Оставляем то, что будет внедряться. Убираем все лишнее-->
+
+<!-- Самой первой строчкой мы должны показать, что этот минишаблон будет внедряться внутрь main.html-->
+{% extends 'main.html' %}
+<!-- Блок кода должен иметь собственное имя -->
+{% block article %}
+
+
 <h4>{{ article.article_date }}</h4>
 <h2>{{ article.article_title }}</h2>
 <p>{{ article.article_text }}</p>
@@ -12,5 +17,4 @@
 {% for comment in comments %}
     <p>{{ comment.comments_text}}</p>
 {% endfor %}
-</body>
-</html>
+{% endblock %}
