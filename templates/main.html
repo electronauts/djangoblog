@@ -1,11 +1,28 @@
 <!-- Lesson 6 наш базовый шаблон-->
+<!-- Lesson 6 нDjango в заголовке значит система работает-->
 
+<!-- Lesson 7 нам необходимо подключить-->
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Django</title>
+<!-- СSS подключается тут -->
+<link rel="stylesheet" type="text/css" href="{% static "static/css/foundation.css" %}">
+
 </head>
 <body>
-<h1>Мой блог опа йобана</h1>>
+<!-- Lesson 7. Добавляем навигацию ссылко-->
+<h1><a href="/" >Блог епта</a></h1>
+
+<!-- Lesson 7.-->
+
+
+<!-- Это из foundation, отрежется слева справа. Row позволяет создать зону разметки. Отрежится немного слева и справа. Внутри row. можно создавать колонки-->
+<div class="row">
+{% block article %}{% endblock %}
+</div>
+
+
 </body>
 </html>

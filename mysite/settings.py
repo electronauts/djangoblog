@@ -56,6 +56,7 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+# Встроенное в Django приложение, отвечает за манипуляцию статичных файлов
     'django.contrib.staticfiles',
     'article',
 )
@@ -99,5 +100,13 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
-
+# Эта строка отвечает за обработку статичных файлов
+# Базовый каталог, на который джанго будет ссылаться при поиске статичных файлов он должен начинаться на static
 STATIC_URL = '/static/'
+
+
+# Урок 7. Static files dirs нужно использовать в том случае, если нам статик фалс должны быть доступны не внутри приложения, а в самом проекте.
+# Эти файлы доступны глобально по всему нашему проекту
+STATICFILES_DIRS = (
+    ('static', '/home/nik/django-developer/env16/mysite/static'),
+)
